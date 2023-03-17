@@ -14,4 +14,28 @@ public class ConverterMoedas {
         JOptionPane.showMessageDialog(null, "Você tem $ " + moedaEuro + " euros");
     }
 
+    public void converterReaisALibras(double valor){
+        double moedaLibra = valor / 6.43;
+        moedaLibra = (double) Math.round(moedaLibra * 100d) / 100;
+        JOptionPane.showMessageDialog(null, "Você tem £ " + moedaLibra + " libras");
+    }
+
+    public void converterDolarReais(double valor){
+        double moedaReais = valor * 5.23;
+        moedaReais = (double) Math.round(moedaReais * 100d) / 100;
+        JOptionPane.showMessageDialog(null, "Você tem $ " + moedaReais + " dólares");
+    }
+
+    public void converterEuroReais(double valor){
+        double moedaReais = valor * 5.52;
+        moedaReais = (double) Math.round(moedaReais * 100d) / 100;
+        JOptionPane.showMessageDialog(null, "Você tem $ " + moedaReais + " euros");
+    }
+
+    public void converterLibrasReais(double valor){
+        double moedaReais = valor * 6.43;
+        moedaReais = (double) Math.round(moedaReais * 100d) / 100;
+        JOptionPane.showMessageDialog(null, "Você tem £ " + moedaReais + " libras");
+    }
+
 }
