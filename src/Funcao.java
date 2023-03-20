@@ -3,6 +3,7 @@ import javax.swing.*;
 public class Funcao {
 
     ConverterMoedas moedas = new ConverterMoedas();
+    ConverterTemperaturas temp = new ConverterTemperaturas();
 
     public void converterMoedas(double valorRecebido) {
         String opcao = JOptionPane.showInputDialog(null, "Escolha a moeda para qual deseja converter seu dinheiro", "Moedas",
@@ -30,7 +31,24 @@ public class Funcao {
         }
     }
 
-    public void converterTemp (double valorRecebido) {
+    public void converterTemp (double tempRecebido) {
+        String opcao = JOptionPane.showInputDialog(null, "Escolha a tempratura para qual deseja converter", "Temperatura",
+                JOptionPane.PLAIN_MESSAGE, null, new Object[]{"De Celsius para Fahrenheit" , "De Celsius para Kelvin" , "De Fahrenheit para Celsius", "De Kelvin para Celsius"}, "Escolha").toString();
+
+        switch (opcao) {
+            case "De Celsius para Fahrenheit":
+                temp.converterCelFaren(tempRecebido);
+                break;
+            case "De Celsius para Kelvin":
+                temp.converterCelKelvin(tempRecebido);
+                break;
+            case "De Fahrenheit para Celsius":
+                temp.converterFahrCel(tempRecebido);
+                break;
+            case "De Kelvin para Celsius":
+                temp.converterKelvinCel(tempRecebido);
+                break;
+        }
 
     }
 
